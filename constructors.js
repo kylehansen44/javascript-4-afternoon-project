@@ -60,7 +60,15 @@ function Employee(name, email, hireDate) {
   */
   
   // Code here
-  
+  function Car(make, model, year){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.move = 0
+    this.moveCar = function(){
+      return this.move += 10
+    }
+  }
   ////////// PROBLEM 4 //////////
   
   /*
@@ -73,16 +81,15 @@ function Employee(name, email, hireDate) {
   */
   
   function Movie(name, genre, rating) {
-    this.name = name;
-    this.genre = genre;
-    this.rating = rating;
+    this.name = name,
+    this.genre = genre,
+    this.rating = rating
   }
   
   // Code here
    
   Movie.prototype.changeRating = function(num){
-    (num + rating) / 2
-    return 
+   return (num + this.rating) / 2 
   }
   
   ////////// PROBLEM 5 //////////
@@ -92,7 +99,25 @@ function Employee(name, email, hireDate) {
   // Once the User constructor function is created, write a prototype method for the User function. Name this method addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). Use these parameters to create a new object and add it to the savedPosts array. Make sure to name the properties the same as described previously (id, title, rating).
   
   // Code here
-  
+  function User(name, age, email, savedPosts){
+    this.name = name,
+    this.age = age,
+    this.email = email,
+    this.savedPosts = savedPosts[{
+      id:[],
+      title: '',
+      rating:[],
+    }]
+      
+  }
+
+  User.prototype.addSavedPost = function(id, title, rating){
+    this.id = id,
+    this.title = title,
+    this.rating = rating
+    this.addSavedPost.push(this.id[i], this.title[i], this.rating[i])
+
+  }
   ////////// PROBLEM 6 //////////
   
   // You will be using the constructor function you just created in problem 5.
